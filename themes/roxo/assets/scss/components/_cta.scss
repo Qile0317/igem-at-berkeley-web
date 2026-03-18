@@ -25,19 +25,18 @@
   &-buttons{
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     li{
-      display: inline-block;
+      display: block;
       @include mobile{
-        display: block;
-      }
-      &:not(:last-child){
-        margin-right: 40px;
-        @include mobile{
-          margin-right: 0;
-          margin-bottom: 20px;
-        }
+        width: 100%;
+        text-align: center;
       }
       .btn{
+        white-space: nowrap;
         @include mobile{
           display: block;
           width: 90%;
