@@ -4,7 +4,7 @@ CLAUDE.md
 
 ## Hugo
 
-# /public/
+/public/
 /resources/_gen/
 /resources/
 .hugo_build.lock
