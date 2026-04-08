@@ -30,24 +30,23 @@
     &-buttons{
       margin: 0;
       padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
       li{
-        display: inline-block;
+        display: block;
         @include mobile{
-          display: block;
-        }
-        &:not(:last-child){
-          margin-right: 30px;
-          @include mobile{
-            margin-right: 0;
-            margin-bottom: 20px;
-          }
+          width: 100%;
+          text-align: center;
         }
         .btn{
           font-weight: 600;
+          white-space: nowrap;
           @include mobile{
+            display: block;
             width: 90%;
             margin: 0 auto;
-            display: block;
           }
         }
       }
