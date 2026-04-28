@@ -214,33 +214,15 @@ summarylength = 10
       cta      = "Partner with us"
       url      = "/finance-be-a-partner"
 
+    [[params.find_your_path.tiles]]
+      icon     = "🌐"
+      audience = "I want to run the club"
+      desc     = "Eternals and Finance teams drive events, brand, partnerships, and funding — keeping student science alive every semester."
+      cta      = "See how to join"
+      url      = "/apply"
+
   [params.ops_support]
-    enable     = true
-    eyebrow    = "Beyond the Bench"
-    heading    = "There are more ways to be part of iGEM."
-    subheading = "Not every contribution happens in the lab. Our operations teams keep the club running — and they're recruiting every semester."
-
-    [[params.ops_support.cards]]
-      icon  = "🌐"
-      title = "Eternals — External & Internal Relations"
-      desc  = "Run events like CUBS and BABS, build iGEM's brand through design and social media, and forge connections with industry and academia."
-      [[params.ops_support.cards.links]]
-        label = "Learn about Eternals"
-        url   = "/eternals"
-      [[params.ops_support.cards.links]]
-        label = "Apply to Eternals"
-        url   = "/apply"
-
-    [[params.ops_support.cards]]
-      icon  = "💰"
-      title = "Finance Team"
-      desc  = "Write grant applications, build corporate partnerships, and manage the funding that makes student research possible."
-      [[params.ops_support.cards.links]]
-        label = "Learn about Finance"
-        url   = "/finance-join-our-team"
-      [[params.ops_support.cards.links]]
-        label = "Apply to Finance"
-        url   = "/apply"
+    enable     = false
 
   [params.partner_cta]
     enable      = true
