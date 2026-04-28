@@ -1,0 +1,30 @@
+{{ with .Site.Params.find_your_path }}
+  {{ if .enable }}
+  <section class="find-your-path">
+    <div class="container">
+      <div class="find-your-path-header">
+        {{ with .eyebrow }}<p class="find-your-path-eyebrow">{{ . }}</p>{{ end }}
+        <h2 class="find-your-path-heading">{{ .heading }}</h2>
+      </div>
+      <div class="find-your-path-grid">
+        {{ range .tiles }}
+        <a href="{{ .url | absURL }}" class="find-your-path-tile">
+          <span class="find-your-path-tile-icon">{{ .icon | safeHTML }}</span>
+          <div class="find-your-path-tile-body">
+            <h3 class="find-your-path-tile-audience">{{ .audience }}</h3>
+            <p class="find-your-path-tile-desc">{{ .desc }}</p>
+          </div>
+          <span class="find-your-path-tile-cta">
+            {{ .cta }}
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="find-your-path-tile-accent"></span>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+{{ end }}

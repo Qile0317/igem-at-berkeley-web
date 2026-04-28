@@ -70,10 +70,42 @@
         font-size: 40px;
       }
       .feature-image{
+        width: 100%;
+        object-fit: cover;
         margin: 20px 0 30px;
       }
+      .inline-img {
+        display: block;
+        width: 100%;
+        max-width: 560px;
+        border-radius: 3px;
+        margin: 30px auto;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        @include tablet {
+          max-width: 100%;
+          float: none !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
+      }
+      .inline-img-right {
+        @extend .inline-img;
+        float: right;
+        margin: 8px 0 24px 32px;
+        max-width: 380px;
+        @include tablet { max-width: 100%; }
+      }
+      .inline-img-left {
+        @extend .inline-img;
+        float: left;
+        margin: 8px 32px 24px 0;
+        max-width: 380px;
+        @include tablet { max-width: 100%; }
+      }
+      .clearfix { clear: both; }
       h2,h3,h4,h5,h6{
         margin-bottom: 15px;
+        clear: both;
       }
       blockquote{
         p{

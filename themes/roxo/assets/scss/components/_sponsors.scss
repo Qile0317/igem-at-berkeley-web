@@ -1,0 +1,60 @@
+.sponsors-belt {
+  background: $gray;
+  padding: 40px 0 32px;
+  border-bottom: 1px solid rgba($primary-color, 0.08);
+  overflow: hidden;
+
+  &-label {
+    font-family: $secondary-font;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: $secondary-color;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  &-track-wrapper {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: sponsors-scroll 32s linear infinite;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  &-item {
+    flex-shrink: 0;
+    padding: 0 40px;
+    opacity: 0.45;
+    transition: opacity 0.25s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    img {
+      height: 36px;
+      width: auto;
+      filter: grayscale(100%);
+      transition: filter 0.25s ease;
+
+      &:hover {
+        filter: grayscale(0%);
+      }
+    }
+  }
+}
+
+@keyframes sponsors-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}

@@ -4,6 +4,15 @@ date: 2019-12-24T13:40:00+06:00
 image: images/blog/blog-post-01.jpg
 feature_image: images/recruitment/cubs.jpg
 author: Alexender Schoitiz
+page_next:
+  image: "images/cubs/cubs25_peptide_design_presentation.jpg"
+  eyebrow: "See What You'd Work On"
+  heading: "This is what a semester at iGEM looks like."
+  description: "Ten teams. Real experiments. Real results. Browse our research teams to see exactly what you'd be joining."
+  primary_button: "Explore our teams"
+  primary_button_url: "/teams"
+  secondary_button: "Start with FERB first"
+  secondary_button_url: "/ferb"
 ---
 ### Apply to our Experimental or Ideation Teams!
 

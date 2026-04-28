@@ -1,0 +1,25 @@
+{{ with .Site.Params.explore }}
+  {{ if .enable }}
+  <section class="explore-igem" id="explore">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>{{ .title }}</h2>
+        <p>{{ .subtitle }}</p>
+      </div>
+      <div class="explore-igem-grid">
+        {{ range .cards }}
+        <a href="{{ .url | absURL }}" class="explore-igem-card">
+          <span class="explore-igem-card-icon">{{ .icon | safeHTML }}</span>
+          <span class="explore-igem-card-title">{{ .title }}</span>
+          <span class="explore-igem-card-arrow">
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+{{ end }}

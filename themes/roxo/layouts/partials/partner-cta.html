@@ -1,0 +1,24 @@
+{{ with .Site.Params.partner_cta }}
+  {{ if .enable }}
+  <section class="partner-cta" style='background-image: url("{{ .image | absURL }}");'>
+    <div class="partner-cta-overlay"></div>
+    <div class="container">
+      <div class="partner-cta-inner">
+        <div class="partner-cta-text">
+          {{ with .eyebrow }}<span class="partner-cta-eyebrow">{{ . }}</span>{{ end }}
+          <h2 class="partner-cta-heading">{{ .heading }}</h2>
+          {{ with .description }}<p class="partner-cta-desc">{{ . }}</p>{{ end }}
+        </div>
+        <div class="partner-cta-action">
+          <a href="{{ .button_url | absURL }}" class="partner-cta-btn">
+            {{ .button }}
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+{{ end }}

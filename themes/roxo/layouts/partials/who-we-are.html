@@ -1,0 +1,39 @@
+{{ with .Site.Params.who_we_are }}
+  {{ if .enable }}
+  <section class="who-we-are" id="who-we-are">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-lg-5 col-md-12 who-we-are-image-col">
+          <div class="who-we-are-image">
+            <img src="{{ .team_image | absURL }}" alt="iGEM at Berkeley team">
+          </div>
+        </div>
+
+        <div class="col-lg-6 offset-lg-1 col-md-12 who-we-are-content">
+          <p class="who-we-are-eyebrow">Who We Are</p>
+          <h2 class="who-we-are-heading">{{ .title }}</h2>
+          <p class="who-we-are-lead">{{ .subtitle }}</p>
+
+          <ul class="who-we-are-pillars">
+            {{ range .pillars }}
+            <li class="who-we-are-pillar">
+              <span class="who-we-are-pillar-icon">{{ .icon | safeHTML }}</span>
+              <span class="who-we-are-pillar-text"><strong>{{ .heading }}.</strong> {{ .text }}</span>
+            </li>
+            {{ end }}
+          </ul>
+
+          <a href="{{ .cta_url | absURL }}" class="who-we-are-cta">
+            {{ .cta_text }}
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  {{ end }}
+{{ end }}

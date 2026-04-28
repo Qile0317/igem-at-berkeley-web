@@ -1,0 +1,18 @@
+{{ $pn := .Params.page_next }}
+{{ if not $pn }}{{ $pn = .Site.Params.page_next }}{{ end }}
+{{ with $pn }}
+<section class="page-next-card" style='background-image: url("{{ .image | absURL }}");'>
+  <div class="page-next-card-overlay"></div>
+  <div class="container">
+    <div class="page-next-card-content">
+      {{ with .eyebrow }}<span class="page-next-card-eyebrow">{{ . }}</span>{{ end }}
+      <h2 class="page-next-card-heading">{{ .heading }}</h2>
+      {{ with .description }}<p class="page-next-card-desc">{{ . }}</p>{{ end }}
+      <div class="page-next-card-actions">
+        {{ with .primary_button }}<a href="{{ $pn.primary_button_url | absURL }}" class="page-next-btn-primary">{{ . }}</a>{{ end }}
+        {{ with .secondary_button }}<a href="{{ $pn.secondary_button_url | absURL }}" class="page-next-btn-secondary">{{ . }}</a>{{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

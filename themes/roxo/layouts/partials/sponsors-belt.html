@@ -1,0 +1,24 @@
+{{ with .Site.Data.clients }}
+  {{ if .enable }}
+  <section class="sponsors-belt">
+    <div class="container">
+      <p class="sponsors-belt-label">Our Sponsors &amp; Partners</p>
+    </div>
+    <div class="sponsors-belt-track-wrapper">
+      <div class="sponsors-belt-track">
+        {{ range .client_logos }}
+        <div class="sponsors-belt-item">
+          <img src="{{ . | absURL }}" alt="sponsor logo">
+        </div>
+        {{ end }}
+        {{/* Duplicate for seamless loop */}}
+        {{ range .client_logos }}
+        <div class="sponsors-belt-item" aria-hidden="true">
+          <img src="{{ . | absURL }}" alt="">
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+{{ end }}

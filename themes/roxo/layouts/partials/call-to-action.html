@@ -24,16 +24,23 @@
                 </span>
               </a>
             </li>
+            {{ with .tertiary_button }}
             <li>
-              <a href="{{ .tertiary_button_url | absURL }}" class="btn btn-secondary">
+              <a href="{{ $.Site.Params.call_to_action.tertiary_button_url | absURL }}" class="btn btn-secondary">
                 <span class="btn-area">
-                  <span data-text="{{ .tertiary_button }}">
-                    {{ .tertiary_button }}
+                  <span data-text="{{ . }}">
+                    {{ . }}
                   </span>
                 </span>
               </a>
             </li>
+            {{ end }}
           </ul>
+          {{ with .sub_link_url }}
+          <a href="{{ . | absURL }}" class="site-cta-sublink">
+            {{ $.Site.Params.call_to_action.sub_link_text }} &rarr;
+          </a>
+          {{ end }}
         </div>
       </div>
     </div>

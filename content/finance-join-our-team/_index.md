@@ -4,6 +4,15 @@ date: 2019-12-24T13:40:00+06:00
 image: images/blog/blog-post-01.jpg
 feature_image: images/finance/finance-join.jpg
 author: Alexender Schoitiz
+page_next:
+  image: "images/finance/finance-join.jpg"
+  eyebrow: "Ready to Apply?"
+  heading: "Run the business side of student science."
+  description: "Grant writing, corporate networking, financial planning — the finance team builds skills you won't find in any classroom."
+  primary_button: "Apply now"
+  primary_button_url: "/apply"
+  secondary_button: "Learn more about finance"
+  secondary_button_url: "/finance"
 ---
 ### Our Purpose
 

@@ -4,6 +4,15 @@ date: 2019-12-24T13:40:00+06:00
 image: images/blog/blog-post-01.jpg
 feature_image: images/finance/finance-banner.jpg
 author: Alexender Schoitiz
+page_next:
+  image: "images/finance/finance-banner.jpg"
+  eyebrow: "Let's Build Something"
+  heading: "Ready to partner with iGEM at Berkeley?"
+  description: "Get in touch and we'll walk you through sponsorship tiers, research alignment, and how your support reaches students directly."
+  primary_button: "Contact us"
+  primary_button_url: "/contact"
+  secondary_button: "See our research"
+  secondary_button_url: "/teams"
 ---
 
 &nbsp;

@@ -4,6 +4,15 @@ date: 2019-12-24T13:40:00+06:00
 image: images/blog/blog-post-01.jpg
 feature_image: images/blog/blog-details-image.jpg
 author: Alexender Schoitiz
+page_next:
+  image: "images/ferb_apply.jpg"
+  eyebrow: "Your Next Semester"
+  heading: "Your path to research starts here."
+  description: "FERB graduates go on to join wetlab and computational biology teams. Apply now and be doing real research by next semester."
+  primary_button: "Apply to FERB"
+  primary_button_url: "/apply"
+  secondary_button: "See where FERB leads"
+  secondary_button_url: "/teams"
 ---
 ### Our Purpose
 

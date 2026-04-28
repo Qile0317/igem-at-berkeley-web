@@ -1,0 +1,967 @@
+// ─── Who We Are ────────────────────────────────────────────────────────────────
+.who-we-are {
+  padding: 100px 0;
+  background: $white;
+
+  @include desktop { padding: 80px 0; }
+
+  &-image-col {
+    @include desktop { margin-bottom: 48px; }
+  }
+
+  &-image {
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      @include desktop { height: 320px; }
+    }
+  }
+
+  &-eyebrow {
+    font-family: $secondary-font;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: $primary-color;
+    margin-bottom: 12px;
+  }
+
+  &-heading {
+    font-family: $primary-font;
+    font-size: 36px;
+    color: $text-color-dark;
+    margin-bottom: 16px;
+    letter-spacing: 0.02em;
+    @include desktop { font-size: 28px; }
+  }
+
+  &-lead {
+    font-family: $secondary-font;
+    font-size: 16px;
+    color: $text-color;
+    line-height: 1.7;
+    margin-bottom: 32px;
+  }
+
+  &-pillars {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 36px;
+  }
+
+  &-pillar {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba($primary-color, 0.08);
+    font-family: $secondary-font;
+    font-size: 14px;
+    color: $text-color;
+    line-height: 1.6;
+
+    &:first-child { border-top: 1px solid rgba($primary-color, 0.08); }
+
+    &-icon { font-size: 16px; flex-shrink: 0; }
+
+    strong { color: $text-color-dark; }
+  }
+
+  &-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: $secondary-font;
+    font-size: 14px;
+    font-weight: 600;
+    color: $primary-color;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: $primary-color;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s $site-ease;
+    }
+
+    &:hover {
+      color: $primary-color;
+      text-decoration: none;
+      &::after { transform: scaleX(1); transform-origin: left; }
+      svg { transform: translateX(4px); }
+    }
+
+    svg { transition: transform 0.3s $site-ease; }
+  }
+}
+
+// ─── Metrics Strip ─────────────────────────────────────────────────────────────
+.metrics-strip {
+  background: $primary-color;
+  padding: 64px 0;
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+
+    @include desktop { grid-template-columns: repeat(2, 1fr); }
+    @include mobile  { grid-template-columns: 1fr; }
+  }
+
+  &-item {
+    text-align: center;
+    padding: 0 24px;
+    border-right: 1px solid rgba($white, 0.15);
+
+    &:last-child { border-right: none; }
+
+    @include desktop {
+      padding: 24px;
+      border-right: none;
+      border-bottom: 1px solid rgba($white, 0.15);
+      &:nth-child(odd) { border-right: 1px solid rgba($white, 0.15); }
+      &:nth-last-child(-n+2) { border-bottom: none; }
+    }
+
+    @include mobile {
+      border-right: none;
+      &:nth-child(odd) { border-right: none; }
+      &:not(:last-child) { border-bottom: 1px solid rgba($white, 0.15); }
+    }
+  }
+
+  &-number {
+    display: block;
+    font-family: $primary-font;
+    font-size: 52px;
+    font-weight: 700;
+    color: $white;
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+
+    @include desktop { font-size: 42px; }
+  }
+
+  &-label {
+    display: block;
+    font-family: $secondary-font;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba($white, 0.65);
+  }
+}
+
+// ─── Featured Teams ────────────────────────────────────────────────────────────
+.featured-teams {
+  padding: 100px 0;
+  background: $gray;
+
+  @include desktop { padding: 80px 0; }
+
+  .section-title { margin-bottom: 52px; }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+
+    @include desktop { grid-template-columns: repeat(2, 1fr); }
+    @include tablet  { grid-template-columns: 1fr; }
+  }
+
+  &-card {
+    background: $white;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s $site-ease, box-shadow 0.3s $site-ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+
+      .featured-teams-card-thumb img { transform: scale(1.04); }
+      .featured-teams-card-link { gap: 10px; }
+    }
+
+    &-thumb {
+      overflow: hidden;
+      height: 190px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s $site-ease;
+      }
+    }
+
+    &-body {
+      padding: 24px 24px 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    &-badge {
+      display: inline-block;
+      font-family: $secondary-font;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: $primary-color;
+      background: rgba($primary-color, 0.08);
+      padding: 3px 8px;
+      border-radius: 2px;
+      margin-bottom: 12px;
+      width: fit-content;
+    }
+
+    h3 {
+      font-family: $primary-font;
+      font-size: 19px;
+      color: $text-color-dark;
+      margin-bottom: 8px;
+      letter-spacing: 0.03em;
+    }
+
+    p {
+      font-family: $secondary-font;
+      font-size: 13px;
+      color: $text-color;
+      line-height: 1.65;
+      margin-bottom: 0;
+      flex: 1;
+    }
+
+    &-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 18px;
+      font-family: $secondary-font;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: $primary-color;
+      text-decoration: none;
+      transition: gap 0.2s ease;
+
+      &:hover { text-decoration: none; color: $primary-color; }
+    }
+  }
+
+  &-footer {
+    text-align: center;
+    margin-top: 48px;
+  }
+}
+
+// ─── Teams Page ────────────────────────────────────────────────────────────────
+.teams-header {
+  padding: 60px 0 40px;
+  background: $gray;
+
+  h1 {
+    font-family: $primary-font;
+    font-size: 42px;
+    color: $text-color-dark;
+    margin-bottom: 16px;
+    @include tablet { font-size: 32px; }
+  }
+
+  p {
+    font-family: $secondary-font;
+    font-size: 16px;
+    color: $text-color;
+    line-height: 1.7;
+    margin: 0;
+  }
+}
+
+.teams-panels {
+  padding: 60px 0 80px;
+  background: $gray;
+}
+
+.teams-panel {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  background: $white;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+
+  &:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+
+  &:last-child { margin-bottom: 0; }
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  &-image {
+    flex: 0 0 340px;
+    overflow: hidden;
+
+    @include desktop    { flex: 0 0 260px; }
+    @include tablet     { flex: none; height: 220px; }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s $site-ease;
+    }
+  }
+
+  &:hover &-image img {
+    transform: scale(1.03);
+  }
+
+  &-body {
+    flex: 1;
+    padding: 36px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include desktop { padding: 28px 32px; }
+    @include tablet  { padding: 24px; }
+  }
+
+  &-badge {
+    display: inline-block;
+    font-family: $secondary-font;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $primary-color;
+    background: rgba($primary-color, 0.08);
+    padding: 3px 9px;
+    border-radius: 2px;
+    margin-bottom: 14px;
+    width: fit-content;
+  }
+
+  &-title {
+    font-family: $primary-font;
+    font-size: 26px;
+    color: $text-color-dark;
+    margin-bottom: 12px;
+    letter-spacing: 0.02em;
+
+    @include desktop { font-size: 22px; }
+  }
+
+  &-summary {
+    font-family: $secondary-font;
+    font-size: 14px;
+    color: $text-color;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 600px;
+  }
+
+  &-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-family: $secondary-font;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $primary-color;
+    text-decoration: none;
+    width: fit-content;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: $primary-color;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.25s $site-ease;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $primary-color;
+      &::after { transform: scaleX(1); transform-origin: left; }
+      svg { transform: translateX(3px); }
+    }
+
+    svg { transition: transform 0.2s ease; }
+  }
+}
+
+// ─── Explore iGEM ──────────────────────────────────────────────────────────────
+.explore-igem {
+  padding: 80px 0;
+  background: $white;
+
+  @include desktop { padding: 64px 0; }
+
+  .section-title {
+    margin-bottom: 40px;
+
+    h2 { margin-bottom: 8px; }
+    p  { font-size: 15px; }
+  }
+
+  &-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  &-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 22px;
+    border: 1px solid rgba($primary-color, 0.15);
+    border-radius: 3px;
+    text-decoration: none;
+    background: $white;
+    transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: none;
+      border-color: $primary-color;
+      background: rgba($primary-color, 0.04);
+      transform: translateY(-2px);
+
+      .explore-igem-card-arrow svg { transform: translateX(3px); }
+    }
+
+    &-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    &-title {
+      font-family: $primary-font;
+      font-size: 14px;
+      font-weight: 700;
+      color: $text-color-dark;
+      letter-spacing: 0.04em;
+    }
+
+    // hide desc entirely — kept in config for future use
+    &-desc { display: none; }
+
+    &-arrow {
+      color: $primary-color;
+      display: flex;
+      align-items: center;
+      margin-left: 4px;
+
+      svg { transition: transform 0.2s ease; }
+    }
+  }
+}
+
+// ─── Page Next — Editorial Card ──────────────────────────────────────────────
+.page-next-card {
+  position: relative;
+  min-height: 420px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  @include desktop { min-height: 360px; }
+  @include mobile  { min-height: 300px; }
+
+  &-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      105deg,
+      rgba(10, 37, 38, 0.88) 0%,
+      rgba(10, 37, 38, 0.60) 55%,
+      rgba(10, 37, 38, 0.30) 100%
+    );
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    padding: 80px 0;
+    @include desktop { padding: 60px 0; }
+    @include mobile  { padding: 48px 0; }
+  }
+
+  &-content {
+    max-width: 560px;
+    @include mobile { max-width: 100%; }
+  }
+
+  &-eyebrow {
+    display: block;
+    font-family: $secondary-font;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba($white, 0.6);
+    margin-bottom: 14px;
+  }
+
+  &-heading {
+    font-family: $primary-font;
+    font-size: 38px;
+    font-weight: 700;
+    color: $white;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+
+    @include desktop { font-size: 30px; }
+    @include mobile  { font-size: 26px; }
+  }
+
+  &-desc {
+    font-family: $secondary-font;
+    font-size: 15px;
+    color: rgba($white, 0.78);
+    line-height: 1.7;
+    margin-bottom: 32px;
+    max-width: 480px;
+  }
+
+  &-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+  }
+}
+
+.page-next-btn-primary {
+  display: inline-block;
+  padding: 13px 28px;
+  background: $white;
+  color: $primary-color;
+  font-family: $secondary-font;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+
+  &:hover {
+    background: rgba($white, 0.9);
+    color: $primary-color;
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+}
+
+.page-next-btn-secondary {
+  display: inline-block;
+  padding: 12px 28px;
+  background: transparent;
+  color: $white;
+  font-family: $secondary-font;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgba($white, 0.5);
+  border-radius: 2px;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+
+  &:hover {
+    border-color: $white;
+    background: rgba($white, 0.1);
+    color: $white;
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+}
+
+// ─── Find Your Path ───────────────────────────────────────────────────────────
+.find-your-path {
+  padding: 100px 0;
+  background: $gray;
+
+  @include desktop { padding: 80px 0; }
+
+  &-header {
+    text-align: center;
+    margin-bottom: 52px;
+  }
+
+  &-eyebrow {
+    font-family: $secondary-font;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: $secondary-color;
+    margin-bottom: 12px;
+  }
+
+  &-heading {
+    font-family: $primary-font;
+    font-size: 36px;
+    color: $text-color-dark;
+    letter-spacing: 0.02em;
+    margin-bottom: 0;
+
+    @include desktop { font-size: 28px; }
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    @include tablet { grid-template-columns: 1fr; gap: 16px; }
+  }
+
+  &-tile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 36px 32px 32px;
+    background: $white;
+    border-radius: 4px;
+    text-decoration: none;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s $site-ease, box-shadow 0.25s $site-ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+      text-decoration: none;
+
+      .find-your-path-tile-accent { transform: scaleX(1); }
+      .find-your-path-tile-cta svg { transform: translateX(4px); }
+    }
+
+    &-accent {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: $primary-color;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s $site-ease;
+    }
+
+    &-icon {
+      font-size: 32px;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    &-body { flex: 1; }
+
+    &-audience {
+      font-family: $primary-font;
+      font-size: 20px;
+      color: $text-color-dark;
+      letter-spacing: 0.04em;
+      margin-bottom: 10px;
+    }
+
+    &-desc {
+      font-family: $secondary-font;
+      font-size: 14px;
+      color: $text-color;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    &-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 24px;
+      font-family: $secondary-font;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: $primary-color;
+
+      svg { transition: transform 0.2s ease; }
+    }
+  }
+}
+
+// ─── Ops Support ─────────────────────────────────────────────────────────────
+.ops-support {
+  padding: 100px 0;
+  background: $white;
+
+  @include desktop { padding: 80px 0; }
+
+  &-header {
+    text-align: center;
+    margin-bottom: 52px;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &-eyebrow {
+    font-family: $secondary-font;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: $secondary-color;
+    margin-bottom: 12px;
+  }
+
+  &-heading {
+    font-family: $primary-font;
+    font-size: 32px;
+    color: $text-color-dark;
+    letter-spacing: 0.02em;
+    margin-bottom: 12px;
+
+    @include desktop { font-size: 26px; }
+  }
+
+  &-subheading {
+    font-family: $secondary-font;
+    font-size: 15px;
+    color: $text-color;
+    line-height: 1.7;
+    margin-bottom: 0;
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+
+    @include tablet { grid-template-columns: 1fr; gap: 20px; }
+  }
+
+  &-card {
+    position: relative;
+    padding: 40px 36px 36px;
+    background: $gray;
+    border-radius: 4px;
+    overflow: hidden;
+
+    &-accent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: $primary-color;
+    }
+
+    &-icon {
+      font-size: 28px;
+      display: block;
+      margin-bottom: 18px;
+    }
+
+    &-title {
+      font-family: $primary-font;
+      font-size: 20px;
+      color: $text-color-dark;
+      letter-spacing: 0.03em;
+      margin-bottom: 12px;
+
+      @include desktop { font-size: 18px; }
+    }
+
+    &-desc {
+      font-family: $secondary-font;
+      font-size: 14px;
+      color: $text-color;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    &-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    &-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: $secondary-font;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: $primary-color;
+      text-decoration: none;
+      transition: gap 0.2s ease;
+
+      &:hover {
+        text-decoration: none;
+        gap: 9px;
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+// ─── Partner CTA ──────────────────────────────────────────────────────────────
+.partner-cta {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+
+  &-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      100deg,
+      rgba(10, 37, 38, 0.92) 0%,
+      rgba(10, 37, 38, 0.72) 50%,
+      rgba(10, 37, 38, 0.50) 100%
+    );
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    padding: 80px 0;
+    @include desktop { padding: 64px 0; }
+    @include mobile  { padding: 52px 0; }
+  }
+
+  &-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+    }
+  }
+
+  &-text {
+    flex: 1;
+    max-width: 620px;
+  }
+
+  &-eyebrow {
+    display: block;
+    font-family: $secondary-font;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba($white, 0.6);
+    margin-bottom: 12px;
+  }
+
+  &-heading {
+    font-family: $primary-font;
+    font-size: 32px;
+    font-weight: 700;
+    color: $white;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-bottom: 14px;
+
+    @include desktop { font-size: 26px; }
+    @include mobile  { font-size: 22px; }
+  }
+
+  &-desc {
+    font-family: $secondary-font;
+    font-size: 14px;
+    color: rgba($white, 0.75);
+    line-height: 1.7;
+    margin-bottom: 0;
+  }
+
+  &-action { flex-shrink: 0; }
+
+  &-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 32px;
+    background: $white;
+    color: $primary-color;
+    font-family: $secondary-font;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    white-space: nowrap;
+    transition: background 0.2s ease, transform 0.15s ease;
+
+    &:hover {
+      background: rgba($white, 0.9);
+      color: $primary-color;
+      text-decoration: none;
+      transform: translateY(-1px);
+
+      svg { transform: translateX(3px); }
+    }
+
+    svg { transition: transform 0.2s ease; }
+  }
+}

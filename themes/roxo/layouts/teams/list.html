@@ -2,78 +2,62 @@
 
 <style>
   .banner {
-    background-color: #1c4b4c; /* Light grey background */
-    color: #fff; /* Dark text color */
+    background-color: #1c4b4c;
+    color: #fff;
     text-align: center;
     padding: 10px 0;
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 40px;
+    margin-bottom: 0;
   }
-  .banner a {
-    color: inherit; /* Inherit the color from the parent element */
-  }
+  .banner a { color: inherit; }
 </style>
 
 <body style="background-color:#fcfbf7;">
-  <section class="site-blog-header">
-    <div class="banner">
-      <a href="/apply">Spring 2026 Applications Open!</a>
-    </div>
+
+  <div class="banner">
+    <a href="/apply">Spring 2026 Applications Open!</a>
+  </div>
+
+  <section class="teams-header">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-12 text-center">
+        <div class="col-lg-8 text-center">
           <h1>{{ .Title }}</h1>
-          <p>
-            iGEM at Berkeley was originally founded around a number of project teams 
-  primarily rooted in two spheres: wetlab engineering and computational biology. Today, iGEM at Berkeley has <b>7 wetlab teams and 3 computational team</b>, each distinct in its goal and exploration of biology through multifaceted approaches and collaborations.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="site-blog">
-    <div class="container">
-      <div class="row justify-content-center mb-5">
-        <a href="https://docs.google.com/document/d/10ke_iA--oGMEhOsAqthPgev2vYlGeFHJOJcghp6xgAA/edit?usp=sharing" class="btn btn-primary small-rounded-button" target="_blank" rel="noopener noreferrer">Learn more about our teams!</a>
-      </div>
-      <div class="row justify-content-center">
-        <iframe src="https://docs.google.com/document/d/10ke_iA--oGMEhOsAqthPgev2vYlGeFHJOJcghp6xgAA/preview" width="100%" height="800" style="border: none;"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- <section class="site-blog">
-    <div class="container">
-      <div class="row">
-        {{ range (.Paginator 10).Pages }}
-        <div class="col-lg-6">
-          <article class="site-blog-post">
-            {{ with .Params.image }}
-            <div class="site-blog-post-thumb">
-              <img src="{{ . | absURL }}" alt="post-thumb">
-            </div>
-            {{ end }}
-            <div class="site-blog-post-content">
-              <span>{{ .Params.author }}</span>
-              <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-              <p>
-                {{ .Summary }} ...
-              </p>
-              <a href="{{ .Permalink }}" class="read-more">read more</a>
-            </div>
-          </article>
-        </div>
-        {{ end }}
-        <div class="col-12">
-          <div class="site-blog-pagination">
-            {{ template "_internal/pagination.html" . }}
+          <p>iGEM at Berkeley runs <strong>7 wetlab teams</strong> and <strong>3 computational biology teams</strong> each semester — each tackling a distinct research question through hands-on experiments or computational approaches.</p>
+          <div style="margin-top: 28px;">
+            <a href="https://docs.google.com/document/d/10ke_iA--oGMEhOsAqthPgev2vYlGeFHJOJcghp6xgAA/edit?usp=sharing" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View the full team roster</a>
           </div>
         </div>
       </div>
     </div>
-  </section>  -->
+  </section>
+
+  <section class="teams-panels">
+    <div class="container">
+      <p style="font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #779094; margin-bottom: 32px; text-align: center;">Selected Past &amp; Current Teams</p>
+      {{ range .Pages }}
+      <div class="teams-panel">
+        <div class="teams-panel-image">
+          <img src="{{ .Params.feature_image | absURL }}" alt="{{ .Title }}">
+        </div>
+        <div class="teams-panel-body">
+          <span class="teams-panel-badge">{{ .Params.author }}</span>
+          <h2 class="teams-panel-title">{{ .Title }}</h2>
+          <p class="teams-panel-summary">{{ .Summary }}</p>
+          <a href="{{ .Permalink }}" class="teams-panel-link">
+            Explore this team
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+
+{{ partial "page-next.html" . }}
 </body>
 
 {{ end }}

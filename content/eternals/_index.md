@@ -4,6 +4,15 @@ date: 2019-12-24T13:40:00+06:00
 image: images/blog-feature-image.png
 feature_image: images/blog-feature-image.png
 author: Alexender Schoitiz
+page_next:
+  image: "images/eternal_apply.jpeg"
+  eyebrow: "Shape iGEM's Community"
+  heading: "Interested in outreach, design, or partnerships?"
+  description: "The Eternals team runs our events, builds our brand, and connects iGEM to the broader world. Applications open every semester."
+  primary_button: "Apply to Eternals"
+  primary_button_url: "/apply"
+  secondary_button: "Find us on Instagram"
+  secondary_button_url: "https://www.instagram.com/igematberkeley"
 ---
 ### iGEM at Berkeley continually collaborates with industry and academia.
 

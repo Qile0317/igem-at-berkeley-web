@@ -4,6 +4,15 @@ date: 2019-12-24T13:40:00+06:00
 image: images/blog/blog-post-01.jpg
 feature_image: images/finance/finance-team.jpg
 author: Alexender Schoitiz
+page_next:
+  image: "images/finance/finance-team.jpg"
+  eyebrow: "Ready to Make an Impact?"
+  heading: "Two ways to support iGEM research."
+  description: "Join the finance team to run grant writing and sponsorships, or become a corporate partner and fund the next generation of student scientists."
+  primary_button: "Join the finance team"
+  primary_button_url: "/finance-join-our-team"
+  secondary_button: "Become a partner"
+  secondary_button_url: "/finance-be-a-partner"
 ---
 ### Thank you for your interest in the Finance team for iGEM at Berkeley!
 

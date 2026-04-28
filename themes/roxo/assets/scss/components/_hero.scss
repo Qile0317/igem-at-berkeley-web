@@ -56,5 +56,8 @@
     position: absolute;
     left: 50%; bottom: 70px;
     transform: translateX(-50%);
+    @include tablet {
+      display: none;
+    }
   }
 }

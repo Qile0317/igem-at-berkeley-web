@@ -4,6 +4,15 @@ date: 2019-12-24T13:40:00+06:00
 image: images/blog/blog-post-01.jpg
 feature_image: images/proposals/proposal-hero.jpg
 author: Alexender Schoitiz
+page_next:
+  image: "images/about/retreat.jpg"
+  eyebrow: "Get Involved"
+  heading: "Ready to join iGEM at Berkeley?"
+  description: "Applications open every semester for research teams, the FERB DeCal, and the Eternals team."
+  primary_button: "Apply to iGEM"
+  primary_button_url: "/apply"
+  secondary_button: "See our research"
+  secondary_button_url: "/teams"
 ---
 ### We are a hub for student-led bioengineering research.
 

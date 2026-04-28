@@ -1,0 +1,33 @@
+{{ with .Site.Params.ops_support }}
+  {{ if .enable }}
+  <section class="ops-support">
+    <div class="container">
+      <div class="ops-support-header">
+        {{ with .eyebrow }}<p class="ops-support-eyebrow">{{ . }}</p>{{ end }}
+        <h2 class="ops-support-heading">{{ .heading }}</h2>
+        {{ with .subheading }}<p class="ops-support-subheading">{{ . }}</p>{{ end }}
+      </div>
+      <div class="ops-support-grid">
+        {{ range .cards }}
+        <div class="ops-support-card">
+          <span class="ops-support-card-accent"></span>
+          <span class="ops-support-card-icon">{{ .icon | safeHTML }}</span>
+          <h3 class="ops-support-card-title">{{ .title }}</h3>
+          <p class="ops-support-card-desc">{{ .desc }}</p>
+          <div class="ops-support-card-links">
+            {{ range .links }}
+            <a href="{{ .url | absURL }}" class="ops-support-card-link">
+              {{ .label }}
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+{{ end }}

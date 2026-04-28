@@ -4,6 +4,11 @@ title         = "iGEM at Berkeley"
 theme         = "roxo"
 summarylength = 10
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 # Site Menus
 [menu]
   # Navbar Menus
@@ -32,7 +37,7 @@ summarylength = 10
     url     = "ferb"
     weight  = 6
   [[menu.nav]]
-    name    = "Join iGEM"
+    name    = "Apply"
     url     = "apply"
     weight  = 7
 
@@ -82,21 +87,182 @@ summarylength = 10
     tertiary_button      = "Contact us on Instagram"
     tertiary_button_url  = "https://www.instagram.com/igematberkeley/"
 
-  [params.portfolio]
-    enable    = true
-    title     = "OUR TEAMS"
-    subtitle  = "Take a look at our Wetlab and Computational Biology teams."
+  [params.featured_teams]
+    enable   = true
+    title    = "Our Research Teams"
+    subtitle = "Student-led wetlab and computational biology projects tackling real synthetic biology problems."
+
+  [params.who_we_are]
+    enable     = true
+    team_image = "images/backgrounds/retreat.png"
+    title      = "Undergrad-led science, open to everyone."
+    subtitle   = "iGEM at Berkeley is UC Berkeley's only hands-on undergraduate synthetic biology club. No grad school required."
+    cta_text   = "Learn more about us"
+    cta_url    = "/about"
+
+    [[params.who_we_are.pillars]]
+      icon    = "🔬"
+      heading = "Student-Led Research"
+      text    = "10 active wetlab and computational biology teams tackle real problems from ideation to publication."
+
+    [[params.who_we_are.pillars]]
+      icon    = "📚"
+      heading = "Open Education"
+      text    = "FERB (BioE 98/198) is our free, zero-prereq DeCal that teaches cloning and synbio fundamentals every semester."
+
+    [[params.who_we_are.pillars]]
+      icon    = "🎉"
+      heading = "Thriving Community"
+      text    = "CUBS, BABS, retreats, and 200+ alumni — the network starts here."
+
+  [params.metrics]
+    enable = true
+
+    [[params.metrics.items]]
+      number = "10+"
+      label  = "Research Teams"
+
+    [[params.metrics.items]]
+      number = "200+"
+      label  = "Active Members"
+
+    [[params.metrics.items]]
+      number = "2"
+      label  = "DeCals Per Semester"
+
+    [[params.metrics.items]]
+      number = "7+"
+      label  = "Years Running"
+
+  [params.explore]
+    enable   = true
+    title    = "Explore iGEM at Berkeley"
+    subtitle = "Find your place in the club — whether you want to pipette, code, organize, or fund the future of biology."
+
+    [[params.explore.cards]]
+      icon  = "🧬"
+      title = "Research Teams"
+      desc  = "Join a wetlab or computational biology team and work on a real semester-long research project."
+      url   = "/teams"
+      cta   = "See all teams"
+
+    [[params.explore.cards]]
+      icon  = "🎓"
+      title = "FERB DeCal"
+      desc  = "Our free two-semester training program (BioE 98/198) takes you from zero to cloning confidently."
+      url   = "/ferb"
+      cta   = "Explore the DeCal"
+
+    [[params.explore.cards]]
+      icon  = "🏛️"
+      title = "Eternals Network"
+      desc  = "200+ alumni across biotech, medicine, and academia. Stay connected after Berkeley."
+      url   = "/eternals"
+      cta   = "Meet the Eternals"
+
+    [[params.explore.cards]]
+      icon  = "💼"
+      title = "Finance & Partnerships"
+      desc  = "Support iGEM research through sponsorship, or join our finance team to manage club operations."
+      url   = "/finance"
+      cta   = "Partner with us"
+
+    [[params.explore.cards]]
+      icon  = "🔭"
+      title = "CUBS Symposium"
+      desc  = "Our semesterly undergraduate bioengineering poster session at Hearst Memorial Mining Building."
+      url   = "/cubs"
+      cta   = "Learn about CUBS"
+
+    [[params.explore.cards]]
+      icon  = "🌱"
+      title = "BABS"
+      desc  = "Berkeley Annual Biology Symposium — a cross-org celebration of undergraduate life sciences research."
+      url   = "/babs"
+      cta   = "Learn about BABS"
+
+    [[params.explore.cards]]
+      icon  = "✉️"
+      title = "Apply to iGEM"
+      desc  = "Applications open every semester. Join a team, the DeCal, or become a general member."
+      url   = "/apply"
+      cta   = "Apply now"
+
+  [params.find_your_path]
+    enable  = true
+    eyebrow = "Find Your Place"
+    heading = "Where do you fit in?"
+
+    [[params.find_your_path.tiles]]
+      icon     = "🔬"
+      audience = "I want to do research"
+      desc     = "Join a wetlab or computational biology team and work on a real semester-long project with mentorship from day one."
+      cta      = "See the teams"
+      url      = "/teams"
+
+    [[params.find_your_path.tiles]]
+      icon     = "📚"
+      audience = "I'm new and want to learn"
+      desc     = "FERB (BioE 98) is a free, zero-prereq DeCal that teaches cloning and synbio fundamentals — no experience needed."
+      cta      = "Explore FERB"
+      url      = "/ferb"
+
+    [[params.find_your_path.tiles]]
+      icon     = "💼"
+      audience = "I want to support science"
+      desc     = "Sponsor our research or join the finance team. Your support keeps student science running every semester."
+      cta      = "Partner with us"
+      url      = "/finance-be-a-partner"
+
+  [params.ops_support]
+    enable     = true
+    eyebrow    = "Beyond the Bench"
+    heading    = "There are more ways to be part of iGEM."
+    subheading = "Not every contribution happens in the lab. Our operations teams keep the club running — and they're recruiting every semester."
+
+    [[params.ops_support.cards]]
+      icon  = "🌐"
+      title = "Eternals — External & Internal Relations"
+      desc  = "Run events like CUBS and BABS, build iGEM's brand through design and social media, and forge connections with industry and academia."
+      [[params.ops_support.cards.links]]
+        label = "Learn about Eternals"
+        url   = "/eternals"
+      [[params.ops_support.cards.links]]
+        label = "Apply to Eternals"
+        url   = "/apply"
+
+    [[params.ops_support.cards]]
+      icon  = "💰"
+      title = "Finance Team"
+      desc  = "Write grant applications, build corporate partnerships, and manage the funding that makes student research possible."
+      [[params.ops_support.cards.links]]
+        label = "Learn about Finance"
+        url   = "/finance-join-our-team"
+      [[params.ops_support.cards.links]]
+        label = "Apply to Finance"
+        url   = "/apply"
+
+  [params.partner_cta]
+    enable      = true
+    eyebrow     = "Support iGEM Research"
+    heading     = "Fund the next generation of student scientists."
+    description = "Your sponsorship directly supports wetlab research, reagents, and the next cohort of undergraduate researchers at UC Berkeley."
+    button      = "View Sponsorship Opportunities"
+    button_url  = "/finance-be-a-partner"
+    image       = "images/finance/finance-banner.jpg"
 
   [params.call_to_action]
     enable              = true
     background_image    = "images/backgrounds/cta-background.jpg"
-    title               = "APPLY NOW"
-    primary_button      = "Apply to an iGEM team"
+    title               = "Ready to do real science?"
+    primary_button      = "Apply to a Team"
     primary_button_url  = "https://forms.gle/c4TgnW8mzwJ5iUWt8"
-    secondary_button    = "Apply to our DeCals"
+    secondary_button    = "Explore the DeCal"
     secondary_button_url = "http://linktr.ee/igematberkeleydecals"
-    tertiary_button    = "View All Applications"
-    tertiary_button_url = "http://linktr.ee/igematberkeley"
+    tertiary_button     = "Become a Sponsor"
+    tertiary_button_url = "finance-be-a-partner"
+    sub_link_text       = "Just want to stay in the loop?"
+    sub_link_url        = "https://docs.google.com/forms/d/e/1FAIpQLSdf3GZ4lHacONnspn08-ca_0arWuRrSkgVZHPoelU54fwIz5A/viewform"
     finance_primary_button      = "Join Our Team"
     finance_primary_button_url  = "finance-join-our-team"
     finance_secondary_button    = "Be A Partner"
@@ -130,6 +296,9 @@ summarylength = 10
         [[params.footer.sitemap.link]]
           name = "CUBS"
           url  = "cubs"
+        [[params.footer.sitemap.link]]
+          name = "BABS"
+          url  = "babs"
         [[params.footer.sitemap.link]]
           name = "DeCal"
           url  = "ferb"
