@@ -1,7 +1,35 @@
 ---
 title: "Cal Undergraduate Bioengineering Symposium"
 date: 2019-12-24T13:40:00+06:00
-feature_image: images/cubs/cubs.jpg
+hero_image: images/cubs/cubs25_poster_sesh.jpg
+hero_sub: "A semesterly undergraduate research symposium at Hearst Memorial Mining Building — open to presenters and attendees from across Berkeley."
+facts:
+  - label: "Venue"
+    value: "Hearst Memorial Mining Building, UC Berkeley"
+  - label: "Frequency"
+    value: "Every semester (Fall & Spring)"
+  - label: "Open to"
+    value: "All — no iGEM membership required"
+  - label: "Contact"
+    value: "directors@igem.berkeley.edu"
+gallery:
+  - src: "images/cubs/cubs25_poster_sesh.jpg"
+    alt: "Poster session at CUBS"
+  - src: "images/cubs/cubs25_compbio.jpg"
+    alt: "Computational biology team at CUBS"
+  - src: "images/cubs/cubs25_peptide_design_presentation.jpg"
+    alt: "Peptide design team presenting at CUBS"
+sections_heading: "What Happens at CUBS"
+sections:
+  - icon: "🗂️"
+    title: "Poster Sessions"
+    text: "Researchers present their work at any stage — from early ideation to results-ready projects. A low-pressure, high-quality venue for getting feedback and finding collaborators."
+  - icon: "🎤"
+    title: "Short Talks"
+    text: "Teams give short presentations on their semester's research. iGEM teams present at every CUBS, making it a great way to follow club progress even if you're not on a team."
+  - icon: "🌐"
+    title: "Open to Everyone"
+    text: "You don't need to be presenting to attend, and you don't need to be an iGEM member to present. Biology-adjacent research from anywhere in the university is welcome."
 page_next:
   image: "images/cubs/cubs25_peptide_design_presentation.jpg"
   eyebrow: "Present at the Next CUBS"
@@ -15,40 +43,6 @@ page_next:
 
 CUBS is iGEM at Berkeley's semesterly undergraduate research symposium, held at **Hearst Memorial Mining Building** on the UC Berkeley campus. Every semester, we bring together student researchers, independent investigators, and biology enthusiasts for a morning of posters, presentations, and genuine scientific conversation.
 
-The event is open to all — you don't need to be presenting to attend, and you don't need to be an iGEM member to present.
+The event is open to all — you don't need to be presenting to attend, and you don't need to be an iGEM member to present. If you're conducting any biology-adjacent research, we'd love to have you share it.
 
-&nbsp;
-
-<img src="/images/cubs/cubs25_poster_sesh.jpg" alt="CUBS poster session" class="inline-img-right">
-
-## What Happens at CUBS
-
-Each CUBS features a mix of **poster presentations** and **short talks** from undergraduate researchers across bioengineering, MCB, and related fields. Teams present work at any stage — from early ideation to results-ready projects. It's a low-pressure, high-quality venue for getting feedback, finding collaborators, and seeing what your peers are building.
-
-iGEM teams present their semester's progress at CUBS, making it a great way to follow along with our research even if you're not on a team.
-
-<div class="clearfix"></div>
-
-&nbsp;
-
-<img src="/images/cubs/cubs25_compbio.jpg" alt="Computational biology team presenting" class="inline-img-left">
-
-## Presentations & Posters
-
-Presenters come from across the university — independent researchers, student orgs, and course-based research programs are all welcome. Past CUBS have featured work in gene editing, protein design, metabolic engineering, computational biology, and more.
-
-If you're conducting any biology-adjacent research, we encourage you to present. You don't need polished results — a clear question and a plan is enough to make for a compelling poster.
-
-<div class="clearfix"></div>
-
-&nbsp;
-
-<img src="/images/cubs/cubs25_peptide_design_presentation.jpg" alt="Student team presentation" class="inline-img-right">
-
-## Come Be Part of It
-
-CUBS runs every semester, usually in late November or early December in the fall and April or May in the spring. Registration and abstract submission open a few weeks before each event.
-
-Follow us on [Instagram @igematberkeley](https://www.instagram.com/igematberkeley) for announcements, or email <directors@igem.berkeley.edu> with questions.
-
-<div class="clearfix"></div>
+Follow us on [Instagram @igematberkeley](https://www.instagram.com/igematberkeley) for event announcements, or email [directors@igem.berkeley.edu](mailto:directors@igem.berkeley.edu) with questions.

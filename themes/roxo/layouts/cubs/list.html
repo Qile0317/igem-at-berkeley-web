@@ -1,20 +1,71 @@
 {{ define "main" }}
+{{ $p := .Params }}
 
 <body style="background-color:#fcfbf7;">
-  <section class="site-blog details">
+
+  <section class="event-hero" style="background-image: url('{{ $p.hero_image | absURL }}');">
+    <div class="event-hero-overlay"></div>
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-12">
-          <article class="site-blog-details">
-            <p>Cal Undergraduate Bioengineering Symposium</p>
-            <h2 class="blog-title">{{ .Title }}</h2>
-            <img class="feature-image" src="{{ .Params.feature_image | absURL }}" alt="blog-feature-image">
-            {{ .Content }}
-          </article>
+      <span class="event-hero-eyebrow">iGEM at Berkeley</span>
+      <h1 class="event-hero-title">{{ .Title }}</h1>
+      {{ with $p.hero_sub }}<p class="event-hero-sub">{{ . }}</p>{{ end }}
+    </div>
+  </section>
+
+  <section class="event-intro">
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col-lg-7">
+          <div class="event-intro-lead">{{ .Content }}</div>
+        </div>
+        <div class="col-lg-4 offset-lg-1">
+          {{ with $p.facts }}
+          <div class="event-intro-facts">
+            {{ range . }}
+            <div class="event-intro-fact">
+              <strong>{{ .label }}</strong>
+              <span>{{ .value }}</span>
+            </div>
+            {{ end }}
+          </div>
+          {{ end }}
         </div>
       </div>
     </div>
   </section>
+
+  {{ with $p.gallery }}
+  <section class="event-gallery">
+    <div class="container">
+      <div class="event-gallery-grid">
+        {{ range . }}
+        <img class="event-gallery-img" src="{{ .src | absURL }}" alt="{{ .alt }}">
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  {{ with $p.sections }}
+  <section class="event-sections">
+    <div class="container">
+      <div class="event-sections-header">
+        <span class="event-sections-eyebrow">At the Event</span>
+        <h2 class="event-sections-heading">{{ $p.sections_heading | default "What to Expect" }}</h2>
+      </div>
+      <div class="event-sections-grid">
+        {{ range . }}
+        <div class="event-sections-card">
+          <span class="event-sections-card-icon">{{ .icon | safeHTML }}</span>
+          <h3 class="event-sections-card-title">{{ .title }}</h3>
+          <p class="event-sections-card-text">{{ .text }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
 {{ partial "page-next.html" . }}
 </body>
 

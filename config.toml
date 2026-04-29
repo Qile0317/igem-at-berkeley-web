@@ -33,13 +33,21 @@ summarylength = 10
     url     = "teams"
     weight  = 5
   [[menu.nav]]
+    name    = "CUBS"
+    url     = "cubs"
+    weight  = 6
+  [[menu.nav]]
+    name    = "BABS"
+    url     = "babs"
+    weight  = 7
+  [[menu.nav]]
     name    = "DeCal"
     url     = "ferb"
-    weight  = 6
+    weight  = 8
   [[menu.nav]]
     name    = "Apply"
     url     = "apply"
-    weight  = 7
+    weight  = 9
 
 # Site Params
 [params]
@@ -94,7 +102,7 @@ summarylength = 10
 
   [params.who_we_are]
     enable     = true
-    team_image = "images/backgrounds/retreat.png"
+    team_image = "images/about/old_retreat.jpg"
     title      = "Undergrad-led science, open to everyone."
     subtitle   = "iGEM at Berkeley is UC Berkeley's only hands-on undergraduate synthetic biology club. No grad school required."
     cta_text   = "Learn more about us"

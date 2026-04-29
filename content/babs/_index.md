@@ -1,7 +1,35 @@
 ---
-title: "Bay Area Bioengineering Symposium (BABS)"
+title: "Bay Area Bioengineering Symposium"
 date: 2024-01-01T00:00:00+00:00
-feature_image: images/babs/babs25_booth.JPG
+hero_image: images/babs/babs25_prof_guthrie.JPG
+hero_sub: "An annual cross-university undergraduate symposium hosted by iGEM at Berkeley in collaboration with UC Davis, Santa Clara University, Stanford, and partner institutions across the Bay Area."
+facts:
+  - label: "Venue"
+    value: "Hearst Memorial Mining Building, UC Berkeley"
+  - label: "Frequency"
+    value: "Annual (Spring)"
+  - label: "Partners"
+    value: "UC Davis · Santa Clara · Stanford"
+  - label: "Contact"
+    value: "directors@igem.berkeley.edu"
+gallery:
+  - src: "images/babs/babs25_booth.JPG"
+    alt: "iGEM at Berkeley booth at BABS"
+  - src: "images/babs/babs25_priyam.JPG"
+    alt: "Student presenting at BABS"
+  - src: "images/babs/babs25_prof_guthrie.JPG"
+    alt: "Keynote speaker at BABS"
+sections_heading: "A Full Day of Science"
+sections:
+  - icon: "🎙️"
+    title: "Keynotes & Industry Panels"
+    text: "Every BABS features keynote speakers from academia and industry. Past speakers include Chris Anderson and Leah Guthrie. An industry panel brings professionals from the frontier of biotech."
+  - icon: "🔬"
+    title: "Talks & Poster Sessions"
+    text: "Student teams from across the Bay Area present through short talks and posters — covering wetlab engineering, protein design, computational biology, and more."
+  - icon: "🤝"
+    title: "Lunch & Networking"
+    text: "A catered lunch and open networking make it easy to meet researchers from other schools, connect with alumni, and find collaborators for future work."
 page_next:
   image: "images/babs/babs25_booth.JPG"
   eyebrow: "Get Involved"
@@ -17,36 +45,4 @@ BABS is an annual cross-university symposium hosted by iGEM at Berkeley in colla
 
 Now in its third year, BABS has grown into one of the region's premier undergraduate biology events — a space where student science gets the audience it deserves.
 
-&nbsp;
-
-<img src="/images/babs/babs25_prof_guthrie.JPG" alt="Keynote speaker at BABS" class="inline-img-right">
-
-## Keynotes & Industry Panels
-
-Every BABS features **keynote speakers** from academia and industry. Past speakers have included Chris Anderson and Leah Guthrie, representing the breadth of where biology research leads.
-
-Alongside the keynote, an **industry panel** brings together professionals working at the frontier of biotech, giving students a direct line to the people building what comes next.
-
-<div class="clearfix"></div>
-
-&nbsp;
-
-<img src="/images/babs/babs25_priyam.JPG" alt="Student presentation at BABS" class="inline-img-left">
-
-## Student Research: Talks & Posters
-
-The heart of BABS is undergraduate research. Student teams from across the Bay Area present their work through **short talks and poster sessions** — covering everything from wetlab engineering and protein design to computational biology and synthetic biology applications.
-
-iGEM teams present their semester's progress at BABS, so it's also a great way to see what we've been working on all semester.
-
-<div class="clearfix"></div>
-
-&nbsp;
-
-## Lunch, Networking & More
-
-BABS is as much about the people as the science. A catered lunch and open networking time make it easy to meet researchers from other schools, connect with alumni, and find collaborators for future projects.
-
-Whether you're a first-year curious about bioengineering or a senior wrapping up your thesis, BABS is a day worth showing up for.
-
-Follow us on [Instagram @igematberkeley](https://www.instagram.com/igematberkeley) for date and registration announcements, or reach out at <directors@igem.berkeley.edu>.
+Follow us on [Instagram @igematberkeley](https://www.instagram.com/igematberkeley) for date and registration announcements, or reach out at [directors@igem.berkeley.edu](mailto:directors@igem.berkeley.edu).
